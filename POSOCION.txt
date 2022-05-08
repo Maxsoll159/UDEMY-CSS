@@ -1,0 +1,52 @@
+Position : fidex   = posicionado de forma definitiva
+posotion: absolute = se mueve en base a su contenedor
+position: relative  = se va mover cuando bajes o subas la pagina
+
+------------------------------------------------------------------
+Enlaces no visitados
+a:link{
+	color: red
+}
+Enlaces visitados
+a:visited{
+	color: blue
+}
+
+----------------------------------------------------------------------
+*Cuando se selecciona un input cambia de color
+input:focus{
+	background: black
+}
+--------------------------------------------------------------------
+*Cuando se pasa el cursor por algun elemento
+a:hover{
+	color: Red
+	font-size: 16px
+}
+-----------------------------------------------------------------------
+*Negacion para que excluyas a quien no poner clases
+p:not(.miparrafo){
+	color: blue
+}
+---------------------------------------------------------------------
+p:first-child   -> Primer Elemento
+p:last-child    -> Al ultimo Elemento
+p:nth-child(5)   -> A cualquier elemento
+p:nth-last-child(3) -> Toma elementos de abajo hacia arriba
+p:nth-child(2n)  -> Elementos Pares 4n 3n 5n
+p:nth-child(odd) -> Elementos Impares
+-----------------------------------------------------------------------
+Pseudoelementos -> aplicar contenido a los elementos
+
+span::before -> Asignar contenido a una etiqueta antes
+span::after  -> Asignar contenido a una etiqueta despues
+p::first-letter  -> Asignas clases a la primera letra del parrafo
+p::first-line    -> Asignar clases al primer parrafo de la p
+
+
+
+
+
+
+
+
