@@ -1,0 +1,167 @@
+Position : fidex   = posicionado de forma definitiva
+posotion: absolute = se mueve en base a su contenedor siempre en cuando el padre este en position relative
+position: relative  = se va mover cuando bajes o subas la pagina
+position: sticky	= se queda estatico en el contenedor padre cuando haces scroll pero cuando termina se desaparecce siem
+
+------------------------------------------------------------------
+Enlaces no visitados
+a:link{
+	color: red
+}
+Enlaces visitados
+a:visited{
+	color: blue
+}
+
+----------------------------------------------------------------------
+*Cuando se selecciona un input cambia de color
+input:focus{
+	background: black
+}
+--------------------------------------------------------------------
+*Cuando se pasa el cursor por algun elemento
+a:hover{
+	color: Red
+	font-size: 16px
+}
+-----------------------------------------------------------------------
+*Negacion para que excluyas a quien no poner clases
+p:not(.miparrafo){
+	color: blue
+}
+---------------------------------------------------------------------
+p:first-child   -> Primer Elemento
+p:last-child    -> Al ultimo Elemento
+p:nth-child(5)   -> A cualquier elemento
+p:nth-last-child(3) -> Toma elementos de abajo hacia arriba
+p:nth-child(2n)  -> Elementos Pares 4n 3n 5n
+p:nth-child(odd) -> Elementos Impares
+-----------------------------------------------------------------------
+Pseudoelementos -> aplicar contenido a los elementos
+
+span::before -> Asignar contenido a una etiqueta antes
+span::after  -> Asignar contenido a una etiqueta despues
+p::first-letter  -> Asignas clases a la primera letra del parrafo
+p::first-line    -> Asignar clases al primer parrafo de la p
+ul li::market  -> Permite darle clases a las bolitas de los li
+input::placeholder -> Le da clases al placeholder del input
+
+---------------------------------------------------------------------
+LLAMAR POR ATRIBUTO []
+input[type="text"]  -> Asigna clases a todos los input que tengan atributo text
+a[href="www.google.com"] -> Asigna clases a todos los enlaces que tengan hrf google
+a[href*="udemy"]         -> Asigna clases a todas las url que tengan la palabra Udemy
+
+-----------------------------------------------------------------------
+BEN
+.box			  B de bloque			 ->         .block
+.box__btn		  E de elemento dentro del bloque ->.block__item
+.box--bgred		  M Modificador			->			.block--modificador
+
+-----------------------------------------------------------------------------
+PREFIJOS DE NAVEGADOR -> Si el navegador no reconoce algun estilo se usa asi
+-webkit-transform	-> CHORME
+-moz-transform		-> FIREFOX
+-ms-transform		-> IE
+-o-transform		-> OPERA
+----------------------------------------------------------------------------
+VARIABLES
+:root{		-> Se declaran Variables
+	--color-primario: Red
+}
+var(--color-primario)  -> Asignar variable a una propiedad
+---------------------------------------------------------------------------
+UNIDAD DE MEDIDA
+*Unidad de Medida Fija 
+	width: 20px
+	height: 20px
+*Unidad de Medida Relativas
+	width: 3rem   -> Relativo al abuelo
+	width:	3em	  -> Relativo al padre
+	width: 50%    -> Siempre calcula el 50% en cualquier pantalla
+*Unidades de Medidas Flexibles
+	width: 50vw   -> Agarra el 50% de ancho de la pantalla sea cual sea el dispositivo
+	height: 50vh  -> Agarra el 50% del alto de la pantalla sea cual sea el dispositivo
+-------------------------------------------------------------------------------
+FUNCION
+	height: cal(100vh - 100px)
+-----------------------------------------------------------------------------
+COLORES
+linear-gradient(90deg, blue, green)   -> Degradado se puede poner de 2 colores a mas
+---------------------------------------------------------------------------------
+TRANSPARENCIA usamos el RGBA
+background-color: transparent
+rgba(0,0,0,0.5)
+opacity: 0.8;    					-> Aplica a todo dentro del div
+-----------------------------------------------------------------------------------
+background-image: url(wwww.imgen1.com)    -> Asigna una imagen
+background-repeat: no-repeat			  -> Para que la imagen no se repita
+background-size: containt				  -> No ocupata todo el espacio del contenedor
+background-size: cover					  -> Ocupa todo el contenedor
+background-position:center center		  -> Modificas la posicion de la imagen hasta 2 valores
+background-attachment: fixed			  -> Se queda fija cuando se hace scroll
+
+background: url("hola.img" no repeat fixed center) -> Agregar imagen resumida 
+background-size: cover
+
+background-image: url(wwww.imgen1.com"), url("www.imagen2.jpg"), yellow;  -> Se puede poner 2 images y colores
+background-blend-mode: multiply			  -> Combinar 2 imaganes
+
+mix-blend-mode: overlay                   -> Convinar elementos hijos con padres ejem h1 se convinaria con la imagenm
+
+-------------------------------------------------------------------------------------------
+ADAPTAR IMAGANES A UN CONTENDOR
+object-fit: cover    					  -> No se distrocione la imagen se aplica a la etiqueta IMG
+objett-position: center center            -> Modificar la posicion de la imagen se aplica en la etiqueta IMG
+filter:blur(5px)						  -> Pone borrosa la imagen se aplica a la etiqueta IMG
+filter: hue-rotate(45deg)				  -> Cambia de color a la imagen se aplica a la etiqueta IMG
+filter:drop-shadow(0 0 15px White)		  -> Le aplica sombra a la imagen y no al contenedor
+
+--------------------------------------------------------------------------------------------
+backdrop-filter: blur(15px)				  -> Pone borroso un DIV de la foto principal
+----------------------------------------------------------------------------------------------
+box-shadow: 0 0 0 black;				  -> Dar sombras a un contenedor y textos
+			x y opacidad COLOR
+--------------------------------------------------------------------------------------------------
+TEXTOS
+letter-spacing:50px						  -> Dar espacio entre las letras
+word-spacing:50px						  -> Dar espacio a las letras
+line-height: 50px						  -> Separacion del texto arriba y abajo
+text-stroke:5px black					  -> Dar un border a las letras
+text-align: center						  -> Alinear el texto
+text-align: justify						  -> Se acomoda el texto en el contenedor
+text-transform: uppercase				  -> Se transforma el texto en mayuscula
+text-transform: lowercase				  -> Se transforma todo en minuscula	
+line-height: 200vh						  -> Darle un alto al texto para centrar en el contenedor}
+text-shadow:0 0 10px White				  -> Dar sombra al texto
+------------------------------------------------------------------------------------------------
+CONTENEDORES
+max-width: 500px						  -> Limita el Tamaño maximo no crezca tanto anchi
+min-width: 500px						  -> Limita el Tamaño minimo no se deforme ancho
+max-height:500px						  -> Limita el Tamaño maximo no crezca tanto ancho
+min-height:500px						  -> Limita el Tamaño minimo no crezca tanto ancho
+height: cal(100vh-100px)				  -> Hace una resta
+-------------------------------------------------------------------------------------------------
+SETEAR VALORES
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: boder-box;				  -> Hace que los contenedores respeten el tamaño
+}
+-----------------------------------------------------------------------------------------------
+overflow: auto                          -> Crea un scroll en el contenedor si el texto es muy grande
+column-count:2;							-> Asignas columnas a un contenedor
+column-gap:20px							-> Espacio entre las columnas
+column-rule: 1px solid black			-> Es una linea divisora de las columnas
+----------------------------------------------------------------------------------------------------
+EDITAR BARRA DE SCROLL
+body::-webkit-scrollbar					-> Dar color y estilos al fondo del scroll
+body::-webkit-scrollbar-thumb			-> Dar color y estilos al barrita del scroll
+html{
+	scroll-behavior: smooth				-> Para cuando le des clik a un enlace haga scroll hasta la posicion de la pagina
+}
+-------------------------------------------------------------------------------------------------------
+MODIFICAR EL CURSOR
+cursor:none								-> Ocultar cursor
+cursor:pointer							-> Cambia el cursor a la manito para dar click
+cursor: url(img/curso.png) auto;		-> Le das una imagen al cursor 
